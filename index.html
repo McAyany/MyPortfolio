@@ -1,56 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- page meta data -->
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayany Obala | Portfolio</title>
+  <meta name="description" content="Portfolio of Ayany Obala - Developer, Creative Technologist & Educator">
   <link rel="stylesheet" href="style.css" />
 </head>
-|<!-- main html starts here -->
 <body>
-  <header>
-    <h1>My Portfolio</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <section class="hero-flex">
+      <figure class="profile-section">
+        <img src="./assets/images/profile.jpg" alt="Ayany Obala" class="profile-pic" />
+        <figcaption class="sr-only">Profile picture of Ayany Obala</figcaption>
+      </figure>
+
+      <section class="hero-text">
+        <h1>Hello, I'm <span class="highlight">Ayany Obala</span></h1>
+        <p>Aspiring Developer · Creative Technologist · Educator</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </section>
+    </section>
   </header>
-<!-- Hero section to give overview of who I am -->
-<section class="hero">
-  <h1>Code. Create. Educate.</h1>
-  <p>I'm a developer on a mission to build smart digital tools that transform learning and open up opportunities for all.</p>
-</section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>I’m a passionate developer in training. I enjoy building practical applications from scratch, creating educational tools, and exploring digital creativity through video editing and music arrangement. I'm on a mission to build smart digital tools that transform learning and open up opportunities for all.</p>
+  </section>
 
   <!-- Education Section -->
-  <section id="education" class="education">
-    <div class="container">
-      <h2>Educational Background</h2>
-      <p>
-        I hold a Diploma in Secondary School Teacher Education from The International Teacher Training College, Nairobi, Kenya.
-      </p>
-      <p>
-        <!--i have included a link to my CV file for download by a button-->
-      <a class="btn-download" href="assets/MyCV.pdf" download>📄 Download My CV</a>
-    </div>
+  <section id="education" class="section education">
+    <h2>Educational Background</h2>
+    <p>I hold a Diploma in Secondary School Teacher Education from The International Teacher Training College, Nairobi, Kenya.</p>
+    <a class="btn-download" href="assets/MyCV.pdf" download>📄 Download My CV</a>
   </section>
-<!-- here  i show the project i have engaged in -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <ul>
-      <li>📄 Project One - A simple webpage</li>
-      <li>📄 Project Two - A styled resume</li>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li><strong>HTML</strong> – Semantic structure and accessibility</li>
+      <li><strong>CSS</strong> – Styling, layout (Flexbox, Grid), responsive design</li>
+      <li><strong>JavaScript</strong> – DOM manipulation, basic interactivity</li>
+      <li><strong>Python</strong> – Scripting, automation, basic web development</li>
+      <li><strong>C Language</strong> – Procedural programming and memory handling</li>
     </ul>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+  <!-- Interests Section -->
+  <section id="interests" class="section interests">
+    <h2>Interests</h2>
+    <ul class="interests-list">
+      <li><strong>Web & Mobile Development:</strong> Building digital solutions for learning and education.</li>
+      <li><strong>Educational Technology:</strong> Creating tools that support fair access to quality education.</li>
+      <li><strong>Capacity Building:</strong> Empowering youth through technology and job creation initiatives.</li>
+      <li><strong>Music & Creative Arts:</strong> Vocal arranging, piano playing, and video editing for cultural storytelling.</li>
+      <li><strong>Content Creation:</strong> Photography and YouTube content for learning and community impact.</li>
+    </ul>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Ayany Obala</p>
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+
+    <article>
+      <h3><a href="https://github.com/McAyany/Kilele-SMS.git" target="_blank">School Management System (Python)</a></h3>
+      <p>An ongoing project for a lightweight, offline-first system for Kenyan schools. Includes CBC tracking, M-Pesa integration, and performance reporting.</p>
+    </article>
+
+    <article>
+      <h3><a href="https://github.com/McAyany/reportform-generator.git" target="_blank">Report Form Generator (Python GUI)</a></h3>
+      <p>Desktop tool for generating customized student report forms from Excel data, with branding and PDF export support.</p>
+    </article>
+
+    <article>
+      <h3><a href="https://github.com/McAyany/portfolio-site" target="_blank">Personal Portfolio Website</a></h3>
+      <p>Responsive site showcasing my skills, work, and interests — built with semantic HTML, CSS, and a touch of JavaScript.</p>
+    </article>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate, hire me, or just say hello, feel free to reach out using the form below or email me directly.</p>
+    
+    <form action="mailto:ayanyobala@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p class="email-direct">Or email me at: <a href="mailto:ayanyobala@gmail.com">ayanyobala@gmail.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Ayany Obala. All rights reserved.</p>
+    <section class="social-links">
+      <a href="https://github.com/McAyany" target="_blank" aria-label="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/ayany-obala-6089501b8/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+    </section>
   </footer>
+
 </body>
 </html>
